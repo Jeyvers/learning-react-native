@@ -8,12 +8,33 @@ import {
   ScreenHeaderBtn,
   Welcome,
 } from "../components";
+import { SAV, SV2 } from "./app.style";
 
 const Home = () => {
+  const router = useRouter();
   return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
+    <SafeAreaView style={SAV}>
+      <Stack.Screen
+        options={{
+          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerShadowVisible: false,
+          headerLeft: () => (
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+          ),
+          headerRight: () => (
+            <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
+          ),
+          headerTitle: "",
+        }}
+      />
+      <ScrollView showsVerticalScrollIndicator="false">
+        <View style={SV2}>
+          <Welcome />
+          <PopularJobs />
+          <NearbyJobs />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
