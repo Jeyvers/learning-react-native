@@ -27,7 +27,7 @@ const Home = () => {
           headerTitle: "",
         }}
       />
-      <ScrollView showsVerticalScrollIndicator="false">
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={SV2}>
           <Welcome />
           <PopularJobs />

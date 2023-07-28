@@ -35,6 +35,12 @@ Commands run:
 
 › Press ? │ show all commands
 
+<!-- REMINDERS -->
+
+- div does not exist in react-native, remember this when you use rafce
+
 <!-- DOCUMENTATION FOR ERRORS ENCOUNTERED SO FAR AND HOW THEY WERE FIXED -->
 
 a. Unmatched route : Fix - Didn't have a default export on homepage. // You removed react-native-unimodules.
+b. Error while updating property showVerticalScrollIndicator : You put the value (false/true) in strings instead of boolean.
+c. uri can't cast : you used src instead of src
