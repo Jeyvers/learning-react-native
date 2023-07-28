@@ -44,3 +44,4 @@ Commands run:
 a. Unmatched route : Fix - Didn't have a default export on homepage. // You removed react-native-unimodules.
 b. Error while updating property showVerticalScrollIndicator : You put the value (false/true) in strings instead of boolean.
 c. uri can't cast : you used src instead of src
+d. renderItem (most occured in) forgetting to destructure, passing a value like a normal function {({})=>()} remember
