@@ -39,6 +39,33 @@ const JobDetails = () => {
     setRefreshing(false);
   }, [refetch]);
 
+  const displayTabContent = () => {
+    switch (activeTab) {
+      case tabs[0]:
+        return (
+          <JobAbout
+            jobDetails={data[0].job_description ?? ["No data available"]}
+          />
+        );
+      case tabs[1]:
+        return (
+          <Specifics
+            title={tabs[1]}
+            points={data[0].job_highlights?.Qualifications ?? ["N/A"]}
+          />
+        );
+      case tabs[2]:
+        return (
+          <Specifics
+            title={tabs[2]}
+            points={data[0].job_highlights?.Responsibilities ?? ["N/A"]}
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <Stack.Screen
@@ -87,9 +114,15 @@ const JobDetails = () => {
                 activeTab={activeTab}
                 setActiveTab={setActiveTab}
               />
+              {displayTabContent()}
             </View>
           )}
         </ScrollView>
+        <JobFooter
+          url={
+            data[0]?.job_google_link ?? "https://careers.google.com/job/results"
+          }
+        />
       </>
     </SafeAreaView>
   );

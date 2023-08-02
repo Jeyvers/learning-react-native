@@ -38,10 +38,20 @@ Commands run:
 <!-- REMINDERS -->
 
 - div does not exist in react-native, remember this when you use rafce
-
+- onclick is onpress for rn
+- for target blank hrefs, you use Linking.openUrl(url) and for routes within, you use router.push(route)
+- in onchange functions in rn, you immediately get the value of the change event ; instead of (e) => e.target.value, it becomes (value) => value
+- onchange function doesn't exist in react native, it's onchangetext
+- router.push takes you to a new page
+- read on usecallback function react again
 <!-- DOCUMENTATION FOR ERRORS ENCOUNTERED SO FAR AND HOW THEY WERE FIXED -->
 
 a. Unmatched route : Fix - Didn't have a default export on homepage. // You removed react-native-unimodules.
 b. Error while updating property showVerticalScrollIndicator : You put the value (false/true) in strings instead of boolean.
 c. uri can't cast : you used src instead of src
 d. renderItem (most occured in) forgetting to destructure, passing a value like a normal function {({})=>()} remember
+
+<!-- DEPLOYMENT -->
+
+- stop server from running
+- npm install -g expo cli (we don't need it)

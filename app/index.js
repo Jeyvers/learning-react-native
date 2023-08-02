@@ -12,6 +12,7 @@ import { SAV, SV2 } from "./app.style";
 
 const Home = () => {
   const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <SafeAreaView style={SAV}>
       <Stack.Screen
@@ -29,7 +30,15 @@ const Home = () => {
       />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={SV2}>
-          <Welcome />
+          <Welcome
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            handleClick={() => {
+              if (searchTerm) {
+                router.push(`/search/${searchTerm}`);
+              }
+            }}
+          />
           <PopularJobs />
           <NearbyJobs />
         </View>
