@@ -5,6 +5,17 @@
       "bundler": "metro"
     },
     "name": "beginner-tutorial-rn-jobs",
-    "slug": "beginner-tutorial-rn-jobs"
+    "slug": "beginner-tutorial-rn-jobs",
+    "extra": {
+      "eas": {
+        "projectId": "5867020f-9798-4021-b9bf-3d251df527b6"
+      }
+    },
+    "android": {
+      "package": "com.jeyi.beginnertutorialrnjobs"
+    },
+    "ios": {
+      "bundleIdentifier": "com.jeyi.beginnertutorialrnjobs"
+    }
   }
 }

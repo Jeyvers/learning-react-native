@@ -55,3 +55,8 @@ d. renderItem (most occured in) forgetting to destructure, passing a value like 
 
 - stop server from running
 - npm install -g expo cli (we don't need it)
+- npm install -g eas-cli
+- npx expo install expo-dev-client
+- eas login
+- eas build --platform android/ios
+- eas build --platform all
