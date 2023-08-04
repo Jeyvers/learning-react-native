@@ -44,6 +44,7 @@ Commands run:
 - onchange function doesn't exist in react native, it's onchangetext
 - router.push takes you to a new page
 - read on usecallback function react again
+
 <!-- DOCUMENTATION FOR ERRORS ENCOUNTERED SO FAR AND HOW THEY WERE FIXED -->
 
 a. Unmatched route : Fix - Didn't have a default export on homepage. // You removed react-native-unimodules.
@@ -51,12 +52,17 @@ b. Error while updating property showVerticalScrollIndicator : You put the value
 c. uri can't cast : you used src instead of src
 d. renderItem (most occured in) forgetting to destructure, passing a value like a normal function {({})=>()} remember
 
-<!-- DEPLOYMENT -->
+<!-- BUILD -->
 
 - stop server from running
 - npm install -g expo cli (we don't need it)
 - npm install -g eas-cli
 - npx expo install expo-dev-client
 - eas login
+- eas build --profile development --platform android
+- eas build --profile development --platform ios (in progress)
+
+<!-- FOR DEPLOYMENT -->
+
 - eas build --platform android/ios
 - eas build --platform all
