@@ -35,6 +35,16 @@ Commands run:
 
 › Press ? │ show all commands
 
+<!-- GENERAL NOTES -->
+
+- React Native is a tool for developing mobile applications for both ios and android.
+- Expo is a local development server for building, bundling, and compiling applications.
+- React Native uses Native components instead of HTML tags (View replaces Divs, Text replaces P tags, Touchable Opacity replaces Buttons, and so on).
+- View uses FlexBox layout by default. Interactive components such as buttons anchor tags are created using a component call Touchable Opacity which gives more room for customization and flexibility.
+- Activity Indicator is the component for spinners or loading indicators.
+- Stack: a layout component that makes it easy to stack elements together and apply a space between them.
+- HeaderLeft & HeaderRight are used to create button on the left and right of the header.
+- ScrollView, SafeAreaView, and FlatList.
 <!-- REMINDERS -->
 
 - div does not exist in react-native, remember this when you use rafce
