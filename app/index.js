@@ -8,7 +8,6 @@ import {
   ScreenHeaderBtn,
   Welcome,
 } from "../components";
-import { SAV, SV2 } from "./app.style";
 
 const Home = () => {
   const router = useRouter();
