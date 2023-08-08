@@ -14,7 +14,7 @@ const Home = () => {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
   return (
-    <SafeAreaView style={SAV}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <Stack.Screen
         options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
@@ -29,7 +29,7 @@ const Home = () => {
         }}
       />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={SV2}>
+        <View style={{ flex: 1, padding: SIZES.medium }}>
           <Welcome
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
